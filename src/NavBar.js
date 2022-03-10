@@ -5,7 +5,7 @@ function NavBar() {
                 <div className="logo">
                     <ion-icon name="logo-instagram"></ion-icon>
                     <div className="separador"></div>
-                    <img src="./img/logo.png" />
+                    <img src="./img/logo.png" alt="" />
                 </div>
 
                 <div className="logo-mobile">
@@ -13,7 +13,7 @@ function NavBar() {
                 </div>
 
                 <div className="instagram-mobile">
-                    <img src="./img/logo.png" />
+                    <img src="./img/logo.png" alt="" />
                 </div>
 
                 <div className="pesquisa">
