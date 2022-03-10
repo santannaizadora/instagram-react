@@ -1,18 +1,21 @@
 import NavBar from './NavBar';
 import Stories from './Stories';
 import Posts from './Posts';
+import SideBar from './SideBar';
 
 function App() {
     return (
         <>
-			<NavBar/>
+            <NavBar />
             <div className="corpo">
                 <div className="esquerda">
-                    <Stories/>
-                    <Posts/>
+                    <Stories />
+                    <Posts />
                 </div>
-        </div>
-		</>
+                <SideBar />
+            </div>
+            
+        </>
     );
 }
 
