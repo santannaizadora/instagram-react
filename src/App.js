@@ -2,6 +2,7 @@ import NavBar from './NavBar';
 import Stories from './Stories';
 import Posts from './Posts';
 import SideBar from './SideBar';
+import FooterMobile from './FooterMobile';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Posts />
                 </div>
                 <SideBar />
+                <FooterMobile />
             </div>
             
         </>
