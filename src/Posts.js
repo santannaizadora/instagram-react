@@ -21,11 +21,20 @@ function Posts() {
     return (
         <div className="posts">
             {posts.map((post, index) =>
-                <div className="post" key={index}>
+                <Post key={index} profilePic={post.profilePic} username={post.username} postPic={post.postPic} likedByPic={post.likedByPic} likedBy={post.likedBy} likes={post.likes}/>
+            )}
+        </div>
+    )
+
+}
+
+function Post(props){
+    return(
+        <div className="post">
                     <div className="topo">
                         <div className="usuario">
-                            <img src={post.profilePic} alt=''/>
-                            {post.username}
+                            <img src={props.profilePic} alt=''/>
+                            {props.username}
                         </div>
                         <div className="acoes">
                             <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -33,7 +42,7 @@ function Posts() {
                     </div>
 
                     <div className="conteudo">
-                        <img src={post.postPic} alt='' />
+                        <img src={props.postPic} alt='' />
                     </div>
 
                     <div className="fundo">
@@ -49,17 +58,14 @@ function Posts() {
                         </div>
 
                         <div className="curtidas">
-                            <img src={post.likedByPic} alt=''/>
+                            <img src={props.likedByPic} alt=''/>
                             <div className="texto">
-                                Curtido por <strong>{post.likedBy}</strong> e <strong>outras {post.likes} pessoas</strong>
+                                Curtido por <strong>{props.likedBy}</strong> e <strong>outras {props.likes} pessoas</strong>
                             </div>
                         </div>
                     </div>
                 </div>
-            )}
-        </div>
     )
-
 }
 
 export default Posts;

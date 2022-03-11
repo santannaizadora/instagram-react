@@ -39,14 +39,7 @@ function Stories() {
 
             {
                 perfis.map((storie, index) =>
-                    <div className="story" key={index}>
-                        <div className="imagem">
-                            <img src={storie.image} alt="" />
-                        </div>
-                        <div className="usuario">
-                            {storie.username}
-                        </div>
-                    </div>
+                    <Storie image={storie.image} username={storie.username} key={index}/>
                 )
             }
 
@@ -55,6 +48,19 @@ function Stories() {
             </div>
         </div>
     );
+}
+
+function Storie(props) {
+    return (
+        <div className="story">
+        <div className="imagem">
+            <img src={props.image} alt="" />
+        </div>
+        <div className="usuario">
+            {props.username}
+        </div>
+    </div>
+    )
 }
 
 export default Stories;
