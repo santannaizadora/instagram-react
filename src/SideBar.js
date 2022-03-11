@@ -30,13 +30,8 @@ function SideBar() {
 
     return (
         <div className="sidebar">
-            <div className="usuario">
-                <img src="./img/catanacomics.svg" alt='' />
-                <div className="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-            </div>
+
+            <Usuario username='catanacomics' profilePic='./img/catanacomics.svg' name='Catana'/>
 
             <div className="sugestoes">
                 <div className="titulo">
@@ -45,7 +40,7 @@ function SideBar() {
                 </div>
 
                 {sugestoes.map((sugestao, index) =>
-                    <Sugestao image={sugestao.image} username={sugestao.username} reason={sugestao.reason} key={index}/>
+                    <Sugestao image={sugestao.image} username={sugestao.username} reason={sugestao.reason} key={index} />
                 )}
 
             </div>
@@ -56,6 +51,18 @@ function SideBar() {
 
             <div className="copyright">
                 © 2021 INSTAGRAM DO FACEBOOK
+            </div>
+        </div>
+    )
+}
+
+function Usuario(props) {
+    return (
+        <div className="usuario">
+            <img src={props.profilePic} alt='' />
+            <div className="texto">
+                <strong>{props.username}</strong>
+                {props.name}
             </div>
         </div>
     )
