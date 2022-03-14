@@ -26,12 +26,19 @@ const sugestoes = [
     }
 ]
 
+const usuario = {
+    username: 'catanacomics',
+    profilePic: './img/catanacomics.svg',
+    name:'Catana'
+
+}
+
 function SideBar() {
 
     return (
         <div className="sidebar">
 
-            <Usuario username='catanacomics' profilePic='./img/catanacomics.svg' name='Catana'/>
+            <Usuario username={usuario.username} profilePic={usuario.profilePic} name={usuario.name}/>
 
             <div className="sugestoes">
                 <div className="titulo">
